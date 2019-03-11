@@ -17,6 +17,7 @@
     "url": "https://github.com/bailicangdu/node-elm"
   },
   "dependencies": {
+    "@babel/runtime": "^7.3.4",
     "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.0",
@@ -42,6 +43,7 @@
     "mongodb": "^2.2.25",
     "mongoose": "^4.9.3",
     "node-fetch": "^1.6.3",
+    "node-gyp": "^3.8.0",
     "pinyin": "^2.8.3",
     "pm2": "^2.8.0",
     "qiniu": "^6.1.13",
