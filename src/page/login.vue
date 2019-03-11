@@ -3,7 +3,7 @@
 	  	<transition name="form-fade" mode="in-out">
 	  		<section class="form_contianer" v-show="showLogin">
 		  		<div class="manage_tip">
-		  			<p>elm后台管理系统</p>
+		  			<p>区块链公益捐赠系统</p>
 		  		</div>
 		    	<el-form :model="loginForm" :rules="rules" ref="loginForm">
 					<el-form-item prop="username">
@@ -13,15 +13,22 @@
 						<el-input type="password" placeholder="密码" v-model="loginForm.password"></el-input>
 					</el-form-item>
 					<el-form-item>
-				    	<el-button type="primary" @click="submitForm('loginForm')" class="submit_btn">登陆</el-button>
+						<el-radio-group v-model="radio9" size="mini">
+						 <el-radio label="1" border >捐款人</el-radio>
+    					<el-radio  label="2" border >被捐款人</el-radio>
+    					<el-radio  label="3" border>使用机构</el-radio>
+    					 </el-radio-group>
+    					  	<el-button type="primary" @click="submitForm('loginForm')" class="submit_btn">登陆</el-button>
+    					  	<el-button type="primary" @click="submitForm('loginForm')" class="submit_btn">注册</el-button>
 				  	</el-form-item>
 				</el-form>
-				<p class="tip">温馨提示：</p>
-				<p class="tip">未登录过的新用户，自动注册</p>
-				<p class="tip">注册过的用户可凭账号密码登录</p>
+				<p class="tip">Powered by ZSTU-Blockchain</p>
 	  		</section>
+	  			
 	  	</transition>
+	  
   	</div>
+
 </template>
 
 <script>
@@ -44,6 +51,7 @@
 					],
 				},
 				showLogin: false,
+				 radio9: '1',
 			}
 		},
 		mounted(){
@@ -91,7 +99,7 @@
                         type: 'success',
                         message: '检测到您之前登录过，将自动登录'
                     });
-					this.$router.push('manage')
+					//this.$router.push('manage')
 				}
 			}
 		}
@@ -114,21 +122,24 @@
 		}
 	}
 	.form_contianer{
-		.wh(320px, 210px);
-		.ctp(320px, 210px);
-		padding: 25px;
-		border-radius: 5px;
+		.wh(420px, 210px);
+		.ctp(620px, 310px);
+		padding: 55px;
+		border-radius: 55px;
 		text-align: center;
 		background-color: #fff;
 		.submit_btn{
-			width: 100%;
+			width: 40%;
 			font-size: 16px;
+			margin:20px;
 		}
 	}
-	.tip{
-		font-size: 12px;
-		color: red;
+	.tip
+	{
+		top: -10px;
+		color: white;
 	}
+	
 	.form-fade-enter-active, .form-fade-leave-active {
 	  	transition: all 1s;
 	}

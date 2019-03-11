@@ -5,21 +5,21 @@
 				<el-menu :default-active="defaultActive" style="min-height: 100%;" background-color="#324057"  text-color="#fff" router>
 					<el-menu-item index="manage"><i class="el-icon-menu"></i>首页</el-menu-item>
 					<el-submenu index="2">
-						<template slot="title"><i class="el-icon-document"></i>数据管理</template>
-						<el-menu-item index="userList">用户列表</el-menu-item>
-						<el-menu-item index="shopList">商家列表</el-menu-item>
-						<el-menu-item index="foodList">食品列表</el-menu-item>
-						<el-menu-item index="orderList">订单列表</el-menu-item>
-						<el-menu-item index="adminList">管理员列表</el-menu-item>
+						<template slot="title"><i class="el-icon-document">选择捐助项目</i></template>
+						<el-menu-item index="userList">精准捐助</el-menu-item>
+						<el-menu-item index="shopList">项目捐助</el-menu-item>
+						<el-menu-item index="foodList">众筹捐助</el-menu-item>
 					</el-submenu>
 					<el-submenu index="3">
-						<template slot="title"><i class="el-icon-plus"></i>添加数据</template>
-						<el-menu-item index="addShop">添加商铺</el-menu-item>
-						<el-menu-item index="addGoods">添加商品</el-menu-item>
+						<template slot="title"><i class="el-icon-plus"></i>余额充值</template>
+						<el-menu-item index="addShop">支付宝、微信充值</el-menu-item>
+						<el-menu-item index="addGoods">虚拟币充值</el-menu-item>
 					</el-submenu>
 					<el-submenu index="4">
-						<template slot="title"><i class="el-icon-star-on"></i>图表</template>
-						<el-menu-item index="visitor">用户分布</el-menu-item>
+						<template slot="title"><i class="el-icon-star-on"></i>捐赠统计</template>
+						<el-menu-item index="visitor">捐助分布</el-menu-item>
+						<el-menu-item index="shopList">善款去向</el-menu-item>
+						<el-menu-item index="foodList">爱心资产</el-menu-item>
 						<!-- <el-menu-item index="newMember">用户数据</el-menu-item> -->
 					</el-submenu>
 					<el-submenu index="5">
@@ -28,8 +28,8 @@
 						<el-menu-item index="vueEdit">文本编辑</el-menu-item>
 					</el-submenu>
 					<el-submenu index="6">
-						<template slot="title"><i class="el-icon-setting"></i>设置</template>
-						<el-menu-item index="adminSet">管理员设置</el-menu-item>
+						<template slot="title"><i class="el-icon-setting"></i>设置个人信息</template>
+						<el-menu-item index="adminSet">通知设置</el-menu-item>
 						<!-- <el-menu-item index="sendMessage">发送通知</el-menu-item> -->
 					</el-submenu>
 					<el-submenu index="7">
