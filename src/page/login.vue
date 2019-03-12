@@ -18,12 +18,16 @@
     					<el-radio  label="2" border >被捐款人</el-radio>
     					<el-radio  label="3" border>使用机构</el-radio>
     					 </el-radio-group>
-    					  	<el-button type="primary" @click="submitForm('loginForm')" class="submit_btn">登陆</el-button>
+    					  	<el-button type="primary" @click="submitForm('loginForm')" class="submit_btn">登录</el-button>
     					  	<el-button type="primary" @click="submitForm('loginForm')" class="submit_btn">注册</el-button>
 				  	</el-form-item>
 				</el-form>
 				<p class="tip">Powered by ZSTU-Blockchain</p>
-	  		</section>
+				<img src="@/assets/img/200px-Zstu.edu.png">
+				<img src="@/assets/img/home-title.png">
+				<img src="@/assets/img/logo.png">
+				<img src="@/assets/svg/logo.svg">
+				</section>
 	  			
 	  	</transition>
 	  
@@ -51,7 +55,7 @@
 					],
 				},
 				showLogin: false,
-				 radio9: '1',
+				 radio9: '',
 			}
 		},
 		mounted(){
@@ -69,12 +73,14 @@
 				this.$refs[formName].validate(async (valid) => {
 					if (valid) {
 						const res = await login({user_name: this.loginForm.username, password: this.loginForm.password})
+						var type = ['捐款人', '被捐款人','使用机构'];
+
 						if (res.status == 1) {
 							this.$message({
 		                        type: 'success',
-		                        message: '登录成功'
+		                        message: '登录成功'+type[this.radio9-1]
 		                    });
-							this.$router.push('manage')
+							this.$router.push('manage-'+this.radio9)
 						}else{
 							this.$message({
 		                        type: 'error',
@@ -139,7 +145,11 @@
 		top: -10px;
 		color: white;
 	}
-	
+	img
+	{
+		height: 60px;
+		margin: 15px;
+	}
 	.form-fade-enter-active, .form-fade-leave-active {
 	  	transition: all 1s;
 	}
