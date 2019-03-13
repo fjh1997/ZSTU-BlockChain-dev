@@ -2,7 +2,7 @@
 
 module.exports = {
 	devServer: {
-    proxy: 'http://localhost:8002',
+    proxy: 'http://localhost:8001',
     open:true
   },
 
