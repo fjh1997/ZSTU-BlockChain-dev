@@ -42,7 +42,7 @@
 
 <script>
 import {mapMutations} from 'vuex'
-// import {imgBaseUrl} from 'src/config/env'
+// import {imgBaseUrl} from '@/config/env'
 import headTop from '@/components/header/head'
 import footGuide from '@/components/footer/footGuide'
 import shopList from '@/components/common/shoplist'

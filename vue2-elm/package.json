@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "concurrently": "^4.1.0",
+    "eslint-plugin-html": "^5.0.3",
     "gyp": "^0.5.0",
     "less": "^3.9.0",
     "node-sass": "^4.11.0",
@@ -35,20 +36,6 @@
     "vue-simplemde": "^0.5.1",
     "vue-template-compiler": "^2.5.21",
     "vuex": "^3.1.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
   },
   "postcss": {
     "plugins": {
