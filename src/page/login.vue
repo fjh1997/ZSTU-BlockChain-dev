@@ -1,10 +1,17 @@
 <template>
   	<div class="login_page fillcontain">
+<transition name="form-fade" mode="in-out">
+  			<el-button type="success" @click="manage()" class="manage_entry" v-show="showLogin" >管理员入口</el-button>
+	 </transition>
 	  	<transition name="form-fade" mode="in-out">
+	  	
+	  		
 	  		<section class="form_contianer" v-show="showLogin">
-		  		<div class="manage_tip">
+	 				
+	 	  		<div class="manage_tip">
 		  			<p>区块链公益捐赠系统</p>
 		  		</div>
+
 		    	<el-form :model="loginForm" :rules="rules" ref="loginForm">
 					<el-form-item prop="username">
 						<el-input v-model="loginForm.username" placeholder="用户名"><span>dsfsf</span></el-input>
@@ -28,6 +35,7 @@
 				<img src="@/assets/img/logo.png">
 				<img src="@/assets/svg/logo.svg">
 				</section>
+			
 	  			
 	  	</transition>
 	  
@@ -69,6 +77,12 @@
 		},
 		methods: {
 			...mapActions(['getAdminData']),
+
+			async manage()
+			{
+				this.$router.push('manage');
+
+			},
 			async submitForm(formName) {
 				this.$refs[formName].validate(async (valid) => {
 					if (valid) {
@@ -80,7 +94,7 @@
 		                        type: 'success',
 		                        message: '登录成功'+type[this.radio9-1]
 		                    });
-							this.$router.push('manage-'+this.radio9)
+							this.$router.push('manage-'+this.radio9);
 						}else{
 							this.$message({
 		                        type: 'error',

@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "server": "npm run dev --prefix node-elm",
-    "dev": "  concurrently \" mkdir  D:\\mongodb \" \"mongod --dbpath D:/mongodb \" \"npm run server\" \"npm run serve\"  ",
-    "install-all": "npm install && npm  install --prefix node-elm ./node-elm",
+    "frontend": "npm run serve --prefix vue2-elm",
+    "dev": "  concurrently \" mkdir  D:\\mongodb \" \"mongod --dbpath D:/mongodb \" \"npm run server\" \"npm run serve\" \"npm run frontend\" ",
+    "install-all": "npm install && npm  install --prefix node-elm ./node-elm &&npm  install --prefix vue2-elm ./vue2-elm",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "concurrently": "^4.1.0",
+  	"concurrently": "^4.1.0",
     "gyp": "^0.5.0",
     "less": "^3.9.0",
     "vue": "^2.5.22"

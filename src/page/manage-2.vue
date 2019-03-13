@@ -5,36 +5,29 @@
 				<el-menu :default-active="defaultActive" style="min-height: 100%;" background-color="#324057"  text-color="#fff" router>
 					<el-menu-item index="manage"><i class="el-icon-menu"></i>首页</el-menu-item>
 					<el-submenu index="2">
-						<template slot="title"><i class="el-icon-document">选择捐助项目</i></template>
-						<el-menu-item index="userList">精准捐助</el-menu-item>
-						<el-menu-item index="shopList">项目捐助</el-menu-item>
-						<el-menu-item index="foodList">众筹捐助</el-menu-item>
+						<template slot="title"><i class="el-icon-document"></i>使用善款</template>
+						<el-menu-item index="userList">机构选择</el-menu-item>
+						<el-menu-item index="shopList">查看余额</el-menu-item>
 					</el-submenu>
-					<el-submenu index="3">
-						<template slot="title"><i class="el-icon-plus"></i>余额充值</template>
-						<el-menu-item index="addShop">支付宝、微信充值</el-menu-item>
-						<el-menu-item index="addGoods">虚拟币充值</el-menu-item>
+						<el-submenu index="3">
+						<template slot="title"><i class="el-icon-star-on"></i>捐赠详情</template>
+						<el-menu-item index="visitor">近期捐赠</el-menu-item>
+					<!-- <el-menu-item index="newMember">用户数据</el-menu-item> -->
 					</el-submenu>
-					<el-submenu index="4">
-						<template slot="title"><i class="el-icon-star-on"></i>捐赠统计</template>
-						<el-menu-item index="visitor">捐助分布</el-menu-item>
-						<el-menu-item index="shopList">善款去向</el-menu-item>
-						<el-menu-item index="foodList">爱心资产</el-menu-item>
-						<!-- <el-menu-item index="newMember">用户数据</el-menu-item> -->
+						<el-submenu index="4">
+						<template slot="title"><i class="el-icon-edit"></i>区块链浏览器</template>
+						<!-- <el-menu-item index="uploadImg">上传图片</el-menu-item> -->
+						<el-menu-item index="vueEdit">区块信息查询</el-menu-item>
+						<el-menu-item index="vueEdit">交易信息查询</el-menu-item>
 					</el-submenu>
 					<el-submenu index="5">
-						<template slot="title"><i class="el-icon-edit"></i>编辑</template>
-						<!-- <el-menu-item index="uploadImg">上传图片</el-menu-item> -->
-						<el-menu-item index="vueEdit">文本编辑</el-menu-item>
-					</el-submenu>
-					<el-submenu index="6">
 						<template slot="title"><i class="el-icon-setting"></i>设置个人信息</template>
-						<el-menu-item index="adminSet">通知设置</el-menu-item>
+						<el-menu-item index="adminSet">设置</el-menu-item>
 						<!-- <el-menu-item index="sendMessage">发送通知</el-menu-item> -->
 					</el-submenu>
-					<el-submenu index="7">
+					<el-submenu index="6">
 						<template slot="title"><i class="el-icon-warning"></i>说明</template>
-						<el-menu-item index="explain">说明</el-menu-item>
+						<el-menu-item index="explain">关于</el-menu-item>
 					</el-submenu>
 				</el-menu>
 			</el-col>
