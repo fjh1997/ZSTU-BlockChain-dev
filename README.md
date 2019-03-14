@@ -10,6 +10,7 @@ windows
 
 ```sh
 npm install --global --production windows-build-tools
+npm install -g @vue/cli
 ```
 以上步骤会自动安装python，如果你已经安装python，请添加新的环境变量。
 </p>
