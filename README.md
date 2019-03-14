@@ -6,6 +6,7 @@ windows
 下载node.js https://nodejs.org/zh-cn/
 去官网下载mongodb，并配置好环境变量 https://www.mongodb.com/download-center/community
 安装vue-cli
+
 ```sh
 npm install -g @vue/cli
 ```
