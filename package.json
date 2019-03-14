@@ -5,7 +5,7 @@
   "scripts": {
     "server": "npm run dev --prefix node-elm",
     "frontend": "npm run serve --prefix vue2-elm",
-    "dev": "  concurrently \" mklink /D vue2-elm\\node_modules node_modules \"   \" mkdir  D:\\mongodb \" \"mongod --dbpath D:/mongodb \" \"npm run server\" \"npm run serve\" \"npm run frontend\" ",
+    "dev": "  concurrently \" mklink /D vue2-elm\\node_modules ..\\node_modules \"   \" mkdir  D:\\mongodb \" \"mongod --dbpath D:/mongodb \" \"npm run server\" \"npm run serve\" \"npm run frontend\" ",
     "serve": "vue-cli-service serve",
     "install-all": "npm install && cd node-elm && npm install",
     "build": "vue-cli-service build",
