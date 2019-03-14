@@ -23,6 +23,8 @@ const vueEdit = r => require.ensure([], () => r(require('@/page/vueEdit')), 'vue
 const adminSet = r => require.ensure([], () => r(require('@/page/adminSet')), 'adminSet');
 const sendMessage = r => require.ensure([], () => r(require('@/page/sendMessage')), 'sendMessage');
 const explain = r => require.ensure([], () => r(require('@/page/explain')), 'explain');
+const donList = r => require.ensure([], () => r(require('@/page/donList')), 'donList');
+
 
 const routes = [
 	{
@@ -112,8 +114,8 @@ const routes = [
 			component: addGoods,
 			meta: ['添加数据', '添加商品'],
 		},{
-			path: '/userList',
-			component: userList,
+			path: '/donList',
+			component: donList,
 			meta: ['数据管理', '用户列表'],
 		},{
 			path: '/shopList',

@@ -6,7 +6,7 @@
 					<el-menu-item index="manage-1"><i class="el-icon-menu"></i>首页</el-menu-item>
 					<el-submenu index="2">
 						<template slot="title"><i class="el-icon-document"></i>捐助项目</template>
-						<el-menu-item index="userList">精准捐助</el-menu-item>
+						<el-menu-item index="donList">精准捐助</el-menu-item>
 						<el-menu-item index="shopList">项目捐助</el-menu-item>
 						<el-menu-item index="foodList">众筹捐助</el-menu-item>
 					</el-submenu>
