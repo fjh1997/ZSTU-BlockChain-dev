@@ -6,12 +6,16 @@
     "server": "npm run dev --prefix node-elm",
     "frontend": "npm run serve --prefix vue2-elm",
     "dev": "  concurrently \" mkdir  D:\\mongodb \" \"mongod --dbpath D:/mongodb \" \"npm run server\" \"npm run serve\" \"npm run frontend\" ",
-    "install-all": "npm install && cd  node-elm && npm  install  && cd ../vue2-elm &&npm  install  ",
     "serve": "vue-cli-service serve",
+    "install-all": "npm install && cd node-elm && npm install",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "better-scroll": "^0.1.15",
+    "fastclick": "^1.0.6",
+    "iscroll": "^5.2.0",
+    "showdown": "^1.6.4",
     "concurrently": "^4.1.0",
     "frontend": "file:vue2-elm",
     "gyp": "^0.5.0",
