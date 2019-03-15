@@ -1,26 +1,28 @@
 {
   "name": "hello-world",
   "version": "0.1.0",
+  "no-optional": "true",
   "private": true,
   "scripts": {
     "server": "npm run dev --prefix node-elm",
     "frontend": "npm run serve --prefix vue2-elm",
     "dev": "  concurrently \" mklink /D vue2-elm\\node_modules ..\\node_modules \"   \" mkdir  D:\\mongodb \" \"mongod --dbpath D:/mongodb \" \"npm run server\" \"npm run serve\" \"npm run frontend\" ",
     "serve": "vue-cli-service serve",
-    "install-all": "npm install && cd node-elm && npm install",
+    "install-all": "yarn install && cd node-elm && yarn install",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "better-scroll": "^0.1.15",
-    "fastclick": "^1.0.6",
-    "iscroll": "^5.2.0",
-    "showdown": "^1.6.4",
     "concurrently": "^4.1.0",
-    "frontend": "file:vue2-elm",
+    "eslint-plugin-html": "^5.0.3",
+    "fastclick": "^1.0.6",
     "gyp": "^0.5.0",
+    "iscroll": "^5.2.0",
     "less": "^3.9.0",
-    "node-elm": "file:node-elm",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "showdown": "^1.6.4",
     "vue": "^2.5.22"
   },
   "devDependencies": {

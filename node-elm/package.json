@@ -1,6 +1,7 @@
 {
   "name": "node-elm",
   "version": "1.0.0",
+  "no-optional": "true",
   "description": "",
   "main": "index.js",
   "author": "cangdu <1264889788@qq.com>",
