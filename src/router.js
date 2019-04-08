@@ -24,8 +24,19 @@ const adminSet = r => require.ensure([], () => r(require('@/page/adminSet')), 'a
 const sendMessage = r => require.ensure([], () => r(require('@/page/sendMessage')), 'sendMessage');
 const explain = r => require.ensure([], () => r(require('@/page/explain')), 'explain');
 const donList = r => require.ensure([], () => r(require('@/page/donList')), 'donList');
-
-
+const donList2 = r => require.ensure([], () => r(require('@/page/donList2')), 'donList2');
+const donList3 = r => require.ensure([], () => r(require('@/page/donList3')), 'donList3');
+const AlipayandWechat = r => require.ensure([], () => r(require('@/page/AlipayandWechat')), 'AlipayandWechat');
+const cryptocurrency = r => require.ensure([], () => r(require('@/page/cryptocurrency')), 'cryptocurrency');
+const Donstatics = r => require.ensure([], () => r(require('@/page/Donstatics')), 'Donstatics');
+const Donstatics2 = r => require.ensure([], () => r(require('@/page/Donstatics2')), 'Donstatics2');
+const Donstatics3 = r => require.ensure([], () => r(require('@/page/Donstatics3')), 'Donstatics3');
+const transactioninfo = r => require.ensure([], () => r(require('@/page/transactioninfo')), 'transactioninfo');
+const blockchaininfo = r => require.ensure([], () => r(require('@/page/blockchaininfo')), 'blockchaininfo');
+const PersoninfoSet = r => require.ensure([], () => r(require('@/page/PersoninfoSet')), 'PersoninfoSet');
+const recent = r => require.ensure([], () => r(require('@/page/recent')), 'recent');
+const ChoiceCompany = r => require.ensure([], () => r(require('@/page/ChoiceCompany')), 'ChoiceCompany');
+const ShowBalance = r => require.ensure([], () => r(require('@/page/ShowBalance')), 'ShowBalance');
 const routes = [
 	{
 		path: '/',
@@ -116,15 +127,24 @@ const routes = [
 		},{
 			path: '/donList',
 			component: donList,
-			meta: ['数据管理', '用户列表'],
+			meta: ['捐赠项目', '项目捐助'],
+		},
+		{
+			path: '/donList2',
+			component: donList,
+			meta: ['捐赠项目', '项目捐助'],
 		},{
-			path: '/shopList',
-			component: shopList,
-			meta: ['数据管理', '商家列表'],
+			path: '/donList3',
+			component: donList,
+			meta: ['捐赠项目', '众筹捐助'],
 		},{
-			path: '/foodList',
-			component: foodList,
-			meta: ['数据管理', '食品列表'],
+			path: '/AlipayandWechat',
+			component: AlipayandWechat,
+			meta: ['余额充值', '支付宝、微信充值'],
+		},{
+			path: '/cryptocurrency',
+			component: cryptocurrency,
+			meta: ['余额充值', '虚拟币充值'],
 		},{
 			path: '/orderList',
 			component: orderList,
@@ -134,9 +154,17 @@ const routes = [
 			component: adminList,
 			meta: ['数据管理', '管理员列表'],
 		},{
-			path: '/visitor',
-			component: visitor,
-			meta: ['图表', '用户分布'],
+			path: '/Donstatics',
+			component: Donstatics,
+			meta: ['捐赠统计', '捐助分布'],
+		},{
+			path: '/Donstatics2',
+			component: Donstatics2,
+			meta: ['捐赠统计', '善款去向'],
+		},{
+			path: '/Donstatics3',
+			component: Donstatics3,
+			meta: ['捐赠统计', '爱心资产'],
 		},{
 			path: '/newMember',
 			component: newMember,
@@ -146,19 +174,23 @@ const routes = [
 			component: uploadImg,
 			meta: ['文本编辑', 'MarkDown'],
 		},{
-			path: '/vueEdit',
-			component: vueEdit,
-			meta: ['编辑', '文本编辑'],
+			path: '/transactioninfo',
+			component: transactioninfo,
+			meta: ['区块链浏览器', '交易信息查询'],
 		},{
-			path: '/adminSet',
-			component: adminSet,
-			meta: ['设置', '管理员设置'],
+			path: '/blockchaininfo',
+			component: blockchaininfo,
+			meta: ['区块链浏览器', '区块信息查询'],
+		},{
+			path: '/PersoninfoSet',
+			component: PersoninfoSet,
+			meta: ['设置', '个人信息设置'],
 		},{
 			path: '/sendMessage',
 			component: sendMessage,
 			meta: ['设置', '发送通知'],
 		},{
-			path: '/explain',
+			path: '/explain1',
 			component: explain,
 			meta: ['说明', '说明'],
 		}]
@@ -172,59 +204,31 @@ const routes = [
 			component: home,
 			meta: [],
 		},{
-			path: '/addShop',
-			component: addShop,
-			meta: ['添加数据', '添加商铺'],
+			path: '/ChoiceCompany',
+			component: ChoiceCompany,
+			meta: ['使用善款', '机构选择'],
 		},{
-			path: '/addGoods',
-			component: addGoods,
-			meta: ['添加数据', '添加商品'],
+			path: '/ShowBalance',
+			component: ShowBalance,
+			meta: ['使用善款', '查看余额'],
 		},{
-			path: '/userList',
-			component: userList,
-			meta: ['数据管理', '用户列表'],
+			path: '/recent',
+			component: recent,
+			meta: ['捐赠详情', '近期捐赠'],
 		},{
-			path: '/shopList',
-			component: shopList,
-			meta: ['数据管理', '商家列表'],
+			path: '/transactioninfo2',
+			component: transactioninfo,
+			meta: ['区块链浏览器', '交易信息查询'],
 		},{
-			path: '/foodList',
-			component: foodList,
-			meta: ['数据管理', '食品列表'],
+			path: '/blockchaininfo2',
+			component: blockchaininfo,
+			meta: ['区块链浏览器', '区块信息查询'],
 		},{
-			path: '/orderList',
-			component: orderList,
-			meta: ['数据管理', '订单列表'],
+			path: '/PersoninfoSet2',
+			component: PersoninfoSet,
+			meta: ['设置', '个人信息设置'],
 		},{
-			path: '/adminList',
-			component: adminList,
-			meta: ['数据管理', '管理员列表'],
-		},{
-			path: '/visitor',
-			component: visitor,
-			meta: ['图表', '用户分布'],
-		},{
-			path: '/newMember',
-			component: newMember,
-			meta: ['图表', '用户数据'],
-		},{
-			path: '/uploadImg',
-			component: uploadImg,
-			meta: ['文本编辑', 'MarkDown'],
-		},{
-			path: '/vueEdit',
-			component: vueEdit,
-			meta: ['编辑', '文本编辑'],
-		},{
-			path: '/adminSet',
-			component: adminSet,
-			meta: ['设置', '管理员设置'],
-		},{
-			path: '/sendMessage',
-			component: sendMessage,
-			meta: ['设置', '发送通知'],
-		},{
-			path: '/explain',
+			path: '/explain2',
 			component: explain,
 			meta: ['说明', '说明'],
 		}]

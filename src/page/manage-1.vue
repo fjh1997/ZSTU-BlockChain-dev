@@ -7,35 +7,35 @@
 					<el-submenu index="2">
 						<template slot="title"><i class="el-icon-document"></i>捐助项目</template>
 						<el-menu-item index="donList">精准捐助</el-menu-item>
-						<el-menu-item index="shopList">项目捐助</el-menu-item>
-						<el-menu-item index="foodList">众筹捐助</el-menu-item>
+						<el-menu-item index="donList2">项目捐助</el-menu-item>
+						<el-menu-item index="donList3">众筹捐助</el-menu-item>
 					</el-submenu>
 					<el-submenu index="3">
 						<template slot="title"><i class="el-icon-plus"></i>余额充值</template>
-						<el-menu-item index="addShop">支付宝、微信充值</el-menu-item>
-						<el-menu-item index="addGoods">虚拟币充值</el-menu-item>
+						<el-menu-item index="AlipayandWechat">支付宝、微信充值</el-menu-item>
+						<el-menu-item index="cryptocurrency">虚拟币充值</el-menu-item>
 					</el-submenu>
 					<el-submenu index="4">
 						<template slot="title"><i class="el-icon-star-on"></i>捐赠统计</template>
-						<el-menu-item index="visitor">捐助分布</el-menu-item>
-						<el-menu-item index="shopList">善款去向</el-menu-item>
-						<el-menu-item index="foodList">爱心资产</el-menu-item>
+						<el-menu-item index="Donstatics">捐助分布</el-menu-item>
+						<el-menu-item index="Donstatics2">善款去向</el-menu-item>
+						<el-menu-item index="Donstatics3">爱心资产</el-menu-item>
 						<!-- <el-menu-item index="newMember">用户数据</el-menu-item> -->
 					</el-submenu>
 					<el-submenu index="5">
 						<template slot="title"><i class="el-icon-edit"></i>区块链浏览器</template>
 						<!-- <el-menu-item index="uploadImg">上传图片</el-menu-item> -->
-						<el-menu-item index="vueEdit">区块信息查询</el-menu-item>
-						<el-menu-item index="vueEdit">交易信息查询</el-menu-item>
+						<el-menu-item index="blockchaininfo">区块信息查询</el-menu-item>
+						<el-menu-item index="transactioninfo">交易信息查询</el-menu-item>
 					</el-submenu>
 					<el-submenu index="6">
-						<template slot="title"><i class="el-icon-setting"></i>设置个人信息</template>
-						<el-menu-item index="adminSet">通知设置</el-menu-item>
+						<template slot="title"><i class="el-icon-setting"></i>设置</template>
+						<el-menu-item index="PersoninfoSet">个人信息设置</el-menu-item>
 						<!-- <el-menu-item index="sendMessage">发送通知</el-menu-item> -->
 					</el-submenu>
 					<el-submenu index="7">
 						<template slot="title"><i class="el-icon-warning"></i>说明</template>
-						<el-menu-item index="explain">关于</el-menu-item>
+						<el-menu-item index="explain1">关于</el-menu-item>
 					</el-submenu>
 				</el-menu>
 			</el-col>
