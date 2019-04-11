@@ -1,13 +1,19 @@
 <template>
     <div id="app" class="fillcontain">
 		    <router-view></router-view>
+    <svg-icon></svg-icon>
     </div>
+    	
 </template>
 
 <script>
-    export default {
-    	
-    }
+   import svgIcon from './components/svg';
+  	export default {
+    	components:{
+            svgIcon
+        }
+  	}
+
 </script>
 
 <style lang="less">
