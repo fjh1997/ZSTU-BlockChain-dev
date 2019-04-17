@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
+import Myhome from '@/components/home/home'
+import MyBlockList from '@/components/home/blockList'
+import MyBlockDetails from '@/components/home/blockDetails'
 Vue.use(Router)
 
 const login = r => require.ensure([], () => r(require('@/page/login')), 'login');
@@ -38,6 +40,8 @@ const recent = r => require.ensure([], () => r(require('@/page/recent')), 'recen
 const ChoiceCompany = r => require.ensure([], () => r(require('@/page/ChoiceCompany')), 'ChoiceCompany');
 const ShowBalance = r => require.ensure([], () => r(require('@/page/ShowBalance')), 'ShowBalance');
 const exchange = r => require.ensure([], () => r(require('@/page/exchange')), 'exchange');
+const SearchCompany = r => require.ensure([], () => r(require('@/page/SearchCompany')), 'SearchCompany');
+
 const routes = [
 	{
 		path: '/',
@@ -213,6 +217,12 @@ const routes = [
 			component: ShowBalance,
 			meta: ['使用善款', '查看余额'],
 		},{
+			path: '/SearchCompany',
+			component: SearchCompany,
+			meta: ['使用善款', '查询机构ID'],
+		},
+
+		{
 			path: '/recent',
 			component: recent,
 			meta: ['捐赠详情', '近期捐赠'],
@@ -245,7 +255,7 @@ const routes = [
 		},{
 			path: '/exchange',
 			component: exchange,
-			meta: ['添加数据', '添加商铺'],
+			meta: ['兑换余额', '兑换'],
 		},{
 			path: '/transactioninfo3',
 			component: transactioninfo,
@@ -263,7 +273,27 @@ const routes = [
 			component: explain,
 			meta: ['说明', '说明'],
 		}]
-	}
+	},{
+      path: '/explorer',
+      //name: 'home',
+      component: Myhome,
+      children:[
+        {
+          path: '',
+          redirect:"blockList",
+        },
+        {
+          path: 'blockList',
+          name: 'blockList',
+          component: MyBlockList
+        },
+        {
+          path: 'blockDetails',
+          name: 'blockDetails',
+          component: MyBlockDetails
+        },
+      ]
+    }
 
 ]
 

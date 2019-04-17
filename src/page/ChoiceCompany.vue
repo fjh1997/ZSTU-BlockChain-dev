@@ -3,10 +3,10 @@
      	<head-top></head-top>
         <el-row style="margin-top: 20px;">
   			<el-col :span="14" :offset="4">
-  				<header class="form_header">选择食品种类</header>
+  				<header class="form_header">选择使用机构</header>
 	  			<el-form :model="categoryForm" ref="categoryForm" label-width="110px" class="form">
 		  			<el-row class="category_select">
-		  				<el-form-item label="食品种类">
+		  				<el-form-item label="使用机构">
 			  				<el-select v-model="categoryForm.categorySelect" :placeholder="selectValue.label" style="width:100%;">
 							    <el-option
 							      	v-for="item in categoryForm.categoryList"
@@ -19,10 +19,10 @@
 					</el-row>
 					<el-row class="add_category_row" :class="showAddCategory? 'showEdit': ''">
 						<div class="add_category">
-							<el-form-item label="食品种类" prop="name">
+							<el-form-item label="使用机构ID" prop="name">
 								<el-input v-model="categoryForm.name"></el-input>
 							</el-form-item>
-							<el-form-item label="种类描述" prop="description">
+							<el-form-item label="机构描述" prop="description">
 								<el-input v-model="categoryForm.description"></el-input>
 							</el-form-item>
 							<el-form-item>
@@ -33,21 +33,21 @@
 					<div class="add_category_button" @click="addCategoryFun">
 						<i class="el-icon-caret-top edit_icon" v-if="showAddCategory"></i>
 						<i class="el-icon-caret-bottom edit_icon" v-else slot="icon"></i>
-						<span>添加食品种类</span>
+						<span>添加使用机构</span>
 					</div>
 	  			</el-form>
-	  			<header class="form_header">添加食品</header>
+	  			<header class="form_header">申请机构服务</header>
 	  			<el-form :model="foodForm" :rules="foodrules" ref="foodForm" label-width="110px" class="form food_form">
-	  				<el-form-item label="食品名称" prop="name">
+	  				<el-form-item label="服务名称" prop="name">
 						<el-input v-model="foodForm.name"></el-input>
 					</el-form-item>
-					<el-form-item label="食品活动" prop="activity">
+					<el-form-item label="服务活动" prop="activity">
 						<el-input v-model="foodForm.activity"></el-input>
 					</el-form-item>
-					<el-form-item label="食品详情" prop="description">
+					<el-form-item label="服务详情" prop="description">
 						<el-input v-model="foodForm.description"></el-input>
 					</el-form-item>
-					<el-form-item label="上传食品图片">
+					<el-form-item label="上传相关附件">
 						<el-upload
 						  class="avatar-uploader"
 						  :action="baseUrl + '/v1/addimg/food'"
@@ -58,7 +58,7 @@
 						  <i v-else class="el-icon-plus avatar-uploader-icon"></i>
 						</el-upload>
 					</el-form-item>
-					<el-form-item label="食品特点">
+					<el-form-item label="服务时长">
 						<el-select v-model="foodForm.attributes" multiple placeholder="请选择">
 						    <el-option
 						      	v-for="item in attributes"
@@ -68,15 +68,15 @@
 						    </el-option>
 					 	</el-select>
 					</el-form-item>
-					<el-form-item label="食品规格">
+					<el-form-item label="服务规格">
 						<el-radio class="radio" v-model="foodSpecs" label="one">单规格</el-radio>
   						<el-radio class="radio" v-model="foodSpecs" label="more">多规格</el-radio>
 					</el-form-item>
 					<el-row v-if="foodSpecs == 'one'">
-						<el-form-item label="包装费">
+						<el-form-item label="服务费用(人民币)">
 							<el-input-number v-model="foodForm.specs[0].packing_fee" :min="0" :max="100"></el-input-number>
 						</el-form-item>
-						<el-form-item label="价格">
+						<el-form-item label="折合Token">
 							<el-input-number v-model="foodForm.specs[0].price" :min="0" :max="10000"></el-input-number>
 						</el-form-item>
 					</el-row>
@@ -88,15 +88,15 @@
 					    :row-class-name="tableRowClassName">
 						    <el-table-column
 						      prop="specs"
-						      label="规格">
+						      label="服务规格">
 						    </el-table-column>
 						    <el-table-column
 						      prop="packing_fee"
-						      label="包装费">
+						      label="服务费用(人民币)">
 						    </el-table-column>
 						    <el-table-column
 						      prop="price"
-						      label="价格">
+						      label="折合Token">
 						    </el-table-column>
 						    <el-table-column label="操作" >
 						    <template slot-scope="scope">
@@ -109,18 +109,18 @@
 						</el-table>
 					</el-row>
 					<el-form-item>
-						<el-button type="primary" @click="addFood('foodForm')">确认添加食品</el-button>
+						<el-button type="primary" @click="addFood('foodForm')">确认添加服务</el-button>
 					</el-form-item>
 	  			</el-form>
-	  			<el-dialog title="添加规格" v-model="dialogFormVisible">
+	  			<el-dialog title="添加服务规格" v-model="dialogFormVisible">
 				  	<el-form :rules="specsFormrules" :model="specsForm">
-					    <el-form-item label="规格" label-width="100px" prop="specs">
+					    <el-form-item label="服务规格" label-width="100px" prop="specs">
 					     	<el-input v-model="specsForm.specs" auto-complete="off"></el-input>
 					    </el-form-item>
-					    <el-form-item label="包装费" label-width="100px">
+					    <el-form-item label="服务费用(人民币)" label-width="100px">
 							<el-input-number v-model="specsForm.packing_fee" :min="0" :max="100"></el-input-number>
 						</el-form-item>
-						<el-form-item label="价格" label-width="100px">
+						<el-form-item label="折合Token" label-width="100px">
 							<el-input-number v-model="specsForm.price" :min="0" :max="10000"></el-input-number>
 						</el-form-item>
 				  	</el-form>
@@ -164,7 +164,7 @@
     			},
     			foodrules: {
     				name: [
-						{ required: true, message: '请输入食品名称', trigger: 'blur' },
+						{ required: true, message: '请输入服务名称', trigger: 'blur' },
 					],
     			},
     			attributes: [{
@@ -184,7 +184,7 @@
 		        },
 		        specsFormrules: {
 		        	specs: [
-						{ required: true, message: '请输入规格', trigger: 'blur' },
+						{ required: true, message: '请输入服务规格', trigger: 'blur' },
 					],
 		        }
     		}
@@ -199,13 +199,13 @@
     			this.restaurant_id = Math.ceil(Math.random()*10);
     			this.$msgbox({
 		          title: '提示',
-		          message: '添加食品需要选择一个商铺，先去就去选择商铺吗？',
+		          message: '申请服务需要填写使用机构ID，先去就去查找使用机构ID吗？',
 		          showCancelButton: true,
 		          confirmButtonText: '确定',
 		          cancelButtonText: '取消',
 		          beforeClose: (action, instance, done) => {
 		            if (action === 'confirm') {
-		              this.$router.push('/shopList');
+		              this.$router.push('/SearchCompany');
 		              done();
 		            } else {
 		            	this.$message({
@@ -261,7 +261,7 @@
 								this.showAddCategory = false;
 								this.$message({
 					            	type: 'success',
-					            	message: '添加成功'
+					            	message: '申请成功'
 					          	});
 							}
 						}catch(err){

@@ -8,12 +8,21 @@ const state = {
 	adminInfo: {
 		avatar: 'default.jpg'
 	},
+	blockData: {},
+    searchInput:""
 }
 
 const mutations = {
 	saveAdminInfo(state, adminInfo){
 		state.adminInfo = adminInfo;
-	}
+	},
+	changeBlockData(state, params) {
+      state.blockData = params;
+      window.sessionStorage.setItem("blockData", JSON.stringify(state.blockData))
+    },
+    changeSearchInput(state, params) {
+      state.searchInput = params;
+    }
 }
 
 const actions = {

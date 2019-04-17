@@ -3,11 +3,12 @@
 		<el-row style="height: 100%;">
 	  		<el-col :span="4"  style="min-height: 100%; background-color: #324057;">
 				<el-menu :default-active="defaultActive" style="min-height: 100%;" background-color="#324057"  text-color="#fff" router>
-					<el-menu-item index="manage"><i class="el-icon-menu"></i>首页</el-menu-item>
+					<el-menu-item index="manage-2"><i class="el-icon-menu"></i>首页</el-menu-item>
 					<el-submenu index="2">
 						<template slot="title"><i class="el-icon-document"></i>使用善款</template>
 						<el-menu-item index="ChoiceCompany">机构选择</el-menu-item>
 						<el-menu-item index="ShowBalance">查看余额</el-menu-item>
+						<el-menu-item index="SearchCompany">查询机构ID</el-menu-item>
 					</el-submenu>
 						<el-submenu index="3">
 						<template slot="title"><i class="el-icon-star-on"></i>捐赠详情</template>
