@@ -1,20 +1,20 @@
 <template>
     <div class="fillcontain">
         <head-top></head-top>
-        <header class="admin_title">管理员信息</header>
+        <header class="admin_title">个人/机构信息</header>
         <div class="admin_set">
             <ul>
                 <li>
-                    <span>姓名：</span><span>{{adminInfo.user_name}}</span>
+                    <span>用户名：</span><span>{{adminInfo.user_name}}</span>
                 </li>
                 <li>
                     <span>注册时间：</span><span>{{adminInfo.create_time}}</span>
                 </li>
                 <li>
-                    <span>管理员权限：</span><span>{{adminInfo.admin}}</span>
+                    <span>Token数量：</span><span>{{adminInfo.admin}}</span>
                 </li>
                 <li>
-                    <span>管理员 ID：</span><span>{{adminInfo.id}}</span>
+                    <span>区块链认证ID：</span><span>{{adminInfo.id}}</span>
                 </li>
                 <li>
                     <span>更换头像：</span>

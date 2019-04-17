@@ -36,18 +36,18 @@
                   </template>
                 </el-table-column>
                 <el-table-column
-                  label="店铺名称"
+                  label="交易ID"
                   prop="name">
                 </el-table-column>
                 <el-table-column
-                  label="店铺地址"
+                  label="交易发送方"
                   prop="address">
                 </el-table-column>
                 <el-table-column
-                  label="店铺介绍"
+                  label="交易接受方"
                   prop="description">
                 </el-table-column>
-                <el-table-column label="操作" width="200">
+                <el-table-column label="用途" width="200">
                   <template slot-scope="scope">
                     <el-button
                       size="mini"

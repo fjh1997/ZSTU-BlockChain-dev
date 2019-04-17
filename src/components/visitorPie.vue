@@ -21,7 +21,7 @@
             initData(){
                 const option = {
                     title : {
-                        text: '用户分布',
+                        text: '捐助用户分布',
                         subtext: '',
                         x:'center'
                     },

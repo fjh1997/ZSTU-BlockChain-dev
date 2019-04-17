@@ -42,18 +42,18 @@
                   </template>
                 </el-table-column>
                 <el-table-column
-                  label="食品名称"
+                  label="用户名"
                   prop="name">
                 </el-table-column>
                 <el-table-column
-                  label="食品介绍"
+                  label="捐助数额"
                   prop="description">
                 </el-table-column>
                 <el-table-column
-                  label="评分"
+                  label="爱心资产"
                   prop="rating">
                 </el-table-column>
-                <el-table-column label="操作" width="160">
+                <el-table-column label="评分" width="160">
                   <template slot-scope="scope">
                     <el-button
                       size="small"
