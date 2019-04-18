@@ -23,6 +23,7 @@
 <script>
   import formatDate from "@/common/js/formatDate.js";
   import {baseURL,baseContract,baseABI} from '@/common/js/public.js';
+  import "@/common/stylus/index.styl";
   const reqURL = `${baseURL}`;
   //实例化web3对象
   var Web3 = require("web3");
@@ -137,7 +138,7 @@
         this.getBlockData();
         this.getSearchInput();
         this.clearSearch();
-        window.location.href="#/blockDetails"
+        window.location.href="#/explorer/blockDetails"
       },
       getBlockData(){
         this.$store.commit("changeBlockData",this.blockData);
@@ -151,6 +152,7 @@
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
+
 .home_wrap{
   .home{
     width: 1224px;

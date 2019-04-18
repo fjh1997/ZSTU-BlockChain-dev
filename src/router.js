@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Myhome from '@/components/home/home'
-import MyBlockList from '@/components/home/blockList'
-import MyBlockDetails from '@/components/home/blockDetails'
+
 Vue.use(Router)
 
 const login = r => require.ensure([], () => r(require('@/page/login')), 'login');
@@ -41,7 +39,9 @@ const ChoiceCompany = r => require.ensure([], () => r(require('@/page/ChoiceComp
 const ShowBalance = r => require.ensure([], () => r(require('@/page/ShowBalance')), 'ShowBalance');
 const exchange = r => require.ensure([], () => r(require('@/page/exchange')), 'exchange');
 const SearchCompany = r => require.ensure([], () => r(require('@/page/SearchCompany')), 'SearchCompany');
-
+const Myhome = r => require.ensure([], () => r(require('@/components/home/home')), 'Myhome');
+const MyBlockList = r => require.ensure([], () => r(require('@/components/home/blockList')), 'blockList');
+const MyBlockDetails = r => require.ensure([], () => r(require('@/components/home/blockDetails')), 'blockDetails');
 const routes = [
 	{
 		path: '/',
@@ -275,10 +275,10 @@ const routes = [
 		}]
 	},{
       path: '/explorer',
-      //name: 'home',
+      name: '',
       component: Myhome,
       children:[
-        {
+       {
           path: '',
           redirect:"blockList",
         },

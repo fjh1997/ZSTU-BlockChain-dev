@@ -8,6 +8,7 @@
 
 <script>
    import svgIcon from './components/svg';
+     import "./common/stylus/index.styl";
   	export default {
     	components:{
             svgIcon
