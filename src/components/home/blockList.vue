@@ -252,7 +252,7 @@
         this.blockData.searchBlock=this.searchBlock;
         this.blockData.searchBlockjp=this.searchBlockjp;
         this.getBlockData();
-        window.location.href="#/explorer/blockDetails"
+       this.$router.push('blockDetails');
       },
       getBlockData(){
         this.$store.commit("changeBlockData",this.blockData);

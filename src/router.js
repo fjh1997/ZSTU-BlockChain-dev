@@ -42,6 +42,7 @@ const SearchCompany = r => require.ensure([], () => r(require('@/page/SearchComp
 const Myhome = r => require.ensure([], () => r(require('@/components/home/home')), 'Myhome');
 const MyBlockList = r => require.ensure([], () => r(require('@/components/home/blockList')), 'blockList');
 const MyBlockDetails = r => require.ensure([], () => r(require('@/components/home/blockDetails')), 'blockDetails');
+const Don = r => require.ensure([], () => r(require('@/page/Don')), 'Don');
 const routes = [
 	{
 		path: '/',
@@ -143,6 +144,10 @@ const routes = [
 			component: donList,
 			meta: ['捐赠项目', '众筹捐助'],
 		},{
+			path: '/Don',
+			component: Don,
+			meta: ['捐赠项目', '众筹捐助'],
+		},{
 			path: '/AlipayandWechat',
 			component: AlipayandWechat,
 			meta: ['余额充值', '支付宝、微信充值'],
@@ -183,7 +188,7 @@ const routes = [
 			component: transactioninfo,
 			meta: ['区块链浏览器', '交易信息查询'],
 		},
-		{path: 'explorer',
+		{path: '/explorer1',
       name: '',
       component: Myhome,
       children:[
@@ -247,7 +252,7 @@ const routes = [
 			component: transactioninfo,
 			meta: ['区块链浏览器', '交易信息查询'],
 		},
-		{path: 'explorer',
+		{path: '/explorer2',
       name: '',
       component: Myhome,
       children:[
@@ -294,7 +299,7 @@ const routes = [
 			meta: ['区块链浏览器', '交易信息查询'],
 		},
 		{
-      path: 'explorer',
+      path: '/explorer3',
       name: '',
       component: Myhome,
       children:[

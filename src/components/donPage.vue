@@ -3,7 +3,7 @@
 <div class="hover03 column">
   
   <div>
-     <figure><img src="https://picsum.photos/300/200?image=244" /></figure>
+     <figure><img @click="Don" style="cursor: pointer;" src="https://picsum.photos/300/200?image=244" /></figure>
     <span>捐赠</span>
   <a target="_blank" class="blue title-link">食品安全 &amp; 环境保护</a>
     <p class="project-partner">Subscribe to our newsletter for updates
@@ -12,7 +12,7 @@
 </p>
     </div>
   <div>
-    <figure><img src="https://picsum.photos/300/200?image=1024" /></figure>
+    <figure><img @click="Don" style="cursor: pointer;" src="https://picsum.photos/300/200?image=1024" /></figure>
     <span>捐赠</span>
      <a target="_blank" class="blue title-link">food security &amp; environment</a>
     <p class="project-partner">Subscribe to our newsletter for updates
@@ -21,7 +21,7 @@
 </p>
   </div>
   <div>
-    <figure><img src="https://picsum.photos/300/200?image=611" /></figure>
+    <figure><img @click="Don" style="cursor: pointer;"  src="https://picsum.photos/300/200?image=611" /></figure>
     <span>捐赠</span>
      <a target="_blank" class="blue title-link">food security &amp; environment</a>
     <p class="project-partner">Subscribe to our newsletter for updates
@@ -47,6 +47,9 @@
         methods: {
             closeTip(){
                 this.$emit('closeTip')
+            },
+             Don(){
+               this.$router.push('/Don');
             }
         }
     }
@@ -90,9 +93,9 @@ body {
 }
 .column div span {
 	position: absolute;
-	bottom: -20px;
+	bottom: -10px;
 	left: 0;
-	z-index: -1;
+	z-index: 1;
 	display: block;
 	width: 300px;
 	margin: 0px;
@@ -117,7 +120,7 @@ figure {
   overflow: hidden;
 }
 figure:hover+span {
-  bottom: -36px;
+  bottom: -20px;
   opacity: 1;
 }
 .hover03 figure img {
