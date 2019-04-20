@@ -2,7 +2,7 @@
   <div class="home_wrap">
     <div class="home">
       <div class="browser_log">
-        <img src="./images/logo.png" alt="车链" @click="turnHome">
+        <img src="./images/logo.png" alt="车链" @click="turnHome" height="300" width="400" align="middle" >
       </div>
       <div class="search_box">
         <div class="search_select_box" @mouseleave="leaveHide">

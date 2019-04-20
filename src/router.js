@@ -182,11 +182,27 @@ const routes = [
 			path: '/transactioninfo',
 			component: transactioninfo,
 			meta: ['区块链浏览器', '交易信息查询'],
-		},{
-			path: '/blockchaininfo',
-			component: blockchaininfo,
-			meta: ['区块链浏览器', '区块信息查询'],
-		},{
+		},
+		{path: 'explorer',
+      name: '',
+      component: Myhome,
+      children:[
+       {
+          path: '',
+          redirect:"blockList",
+        },
+        {
+          path: 'blockList',
+          name: 'blockList',
+          component: MyBlockList
+        },
+        {
+          path: 'blockDetails',
+          name: 'blockDetails',
+          component: MyBlockDetails
+        },
+      ]
+    },{
 			path: '/PersoninfoSet',
 			component: PersoninfoSet,
 			meta: ['设置', '个人信息设置'],
@@ -230,11 +246,27 @@ const routes = [
 			path: '/transactioninfo2',
 			component: transactioninfo,
 			meta: ['区块链浏览器', '交易信息查询'],
-		},{
-			path: '/blockchaininfo2',
-			component: blockchaininfo,
-			meta: ['区块链浏览器', '区块信息查询'],
-		},{
+		},
+		{path: 'explorer',
+      name: '',
+      component: Myhome,
+      children:[
+       {
+          path: '',
+          redirect:"blockList",
+        },
+        {
+          path: 'blockList',
+          name: 'blockList',
+          component: MyBlockList
+        },
+        {
+          path: 'blockDetails',
+          name: 'blockDetails',
+          component: MyBlockDetails
+        },
+      ]
+    },{
 			path: '/PersoninfoSet2',
 			component: PersoninfoSet,
 			meta: ['设置', '个人信息设置'],
@@ -260,21 +292,9 @@ const routes = [
 			path: '/transactioninfo3',
 			component: transactioninfo,
 			meta: ['区块链浏览器', '交易信息查询'],
-		},{
-			path: '/blockchaininfo3',
-			component: blockchaininfo,
-			meta: ['区块链浏览器', '区块信息查询'],
-		},{
-			path: '/PersoninfoSet3',
-			component: PersoninfoSet,
-			meta: ['设置', '机构信息设置'],
-		},{
-			path: '/explain3',
-			component: explain,
-			meta: ['说明', '说明'],
-		}]
-	},{
-      path: '/explorer',
+		},
+		{
+      path: 'explorer',
       name: '',
       component: Myhome,
       children:[
@@ -293,7 +313,16 @@ const routes = [
           component: MyBlockDetails
         },
       ]
-    }
+    },{
+			path: '/PersoninfoSet3',
+			component: PersoninfoSet,
+			meta: ['设置', '机构信息设置'],
+		},{
+			path: '/explain3',
+			component: explain,
+			meta: ['说明', '说明'],
+		}]
+	}
 
 ]
 

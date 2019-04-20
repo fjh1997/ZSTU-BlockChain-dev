@@ -8,13 +8,13 @@ windows
 安装vue-cli
 
 ```sh
-npm install -g @vue/cli
+yarn global add @vue/cli
 ```
 注：如果接下来提示有关gyp的报错
 执行以下步骤
 
 ```sh
-npm install --global --production windows-build-tools
+yarn global add windows-build-tools  --production
 ```
 以上步骤会自动安装python，如果你已经安装python，请添加新的环境变量。
 </p>
@@ -23,10 +23,10 @@ npm install --global --production windows-build-tools
 ```
 ## 2.安装依赖
 ```sh
-npm run install-all
+yarn install-all
 ```
 
 ## 3.编译运行
 ```sh
-npm run dev
+yarn run dev
 ```

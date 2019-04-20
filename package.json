@@ -4,9 +4,9 @@
   "no-optional": "true",
   "private": true,
   "scripts": {
-    "server": "npm run dev --prefix node-elm",
-    "frontend": "npm run serve --prefix vue2-elm",
-    "dev": "  concurrently \" mklink /D vue2-elm\\node_modules ..\\node_modules \"   \" mkdir  D:\\mongodb \" \"mongod --dbpath D:/mongodb \" \"npm run server\" \"npm run serve\" \"npm run frontend\" ",
+    "server": "yarn --cwd node-elm dev",
+    "frontend": "yarn  --cwd vue2-elm serve",
+    "dev": "  concurrently \" mklink /D vue2-elm\\node_modules ..\\node_modules \"   \" mkdir  D:\\mongodb \" \"mongod --dbpath D:/mongodb \" \"yarn server\" \"yarn serve\" \"yarn frontend\" ",
     "serve": "vue-cli-service serve",
     "install-all": "yarn install && cd node-elm && yarn install",
     "build": "vue-cli-service build",

@@ -25,7 +25,7 @@
 					<el-submenu index="5">
 						<template slot="title"><i class="el-icon-edit"></i>区块链浏览器</template>
 						<!-- <el-menu-item index="uploadImg">上传图片</el-menu-item> -->
-						<el-menu-item index="blockchaininfo">区块信息查询</el-menu-item>
+						<el-menu-item index="manage-1/explorer">区块信息查询</el-menu-item>
 						<el-menu-item index="transactioninfo">交易信息查询</el-menu-item>
 					</el-submenu>
 					<el-submenu index="6">
