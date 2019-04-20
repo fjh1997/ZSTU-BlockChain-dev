@@ -157,6 +157,15 @@
   .home{
     width: 1224px;
     margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding 50px 0
+    background-color: #040b1c;
+    background-image: url(./images/bg-bottom.png), url(./images/bg-bottom.png);
+    background-position: top center, top 1080px center;
+    background-repeat: no-repeat, repeat-y;
+   
     .browser_log {
       text-align: center;
       img{
@@ -196,7 +205,7 @@
           box-shadow: 0px 3px 14px 1px rgba(255, 255, 255, 0.39);
           border-radius: 25px 0px 0px 0px;
           cursor: pointer;
-          background-image: url('./images/up.png');
+          background-image: url(./images/up.png);
           background-position: top 17px right 15px;
           background-repeat: no-repeat;
         }
@@ -210,7 +219,7 @@
           box-shadow: 0px 3px 14px 1px rgba(255, 255, 255, 0.39);
           border-radius: 25px 0px 0px 0px;
           cursor: pointer;
-          background-image: url('./images/down.png');
+          background-image: url(./images/down.png);
           background-position: top 17px right 15px;
           background-repeat: no-repeat;
         }
@@ -286,5 +295,6 @@
     }
     
   }
+background-image: url(./images/bg-bottom.png), url(./images/bg-bottom.png);
 }
 </style>
