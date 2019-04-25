@@ -28,5 +28,5 @@ yarn install-all
 
 ## 3.编译运行
 ```sh
-yarn run dev
+yarn dev
 ```
